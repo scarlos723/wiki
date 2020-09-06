@@ -1,0 +1,38 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Create new page
+{% endblock %}
+
+{% block body %}
+<h1>Add New Page</h1>
+<div class="content">
+    <form action="/create" method="POST">
+        {% csrf_token %}
+        <!-- agrega un token de seguridad para poder hacer el post -->
+
+        <div>
+            Title:
+        </div>
+        <div>
+            {{form.title}}
+        </div>
+        <div>
+            Definition:
+        </div>
+        <div>
+
+            {{form.definition}}
+        </div>
+
+
+        <input type="submit" name="" id="" value="Create">
+    </form>
+
+</div>
+
+
+
+
+
+{% endblock %}
